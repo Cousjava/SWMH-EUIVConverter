@@ -11,6 +11,22 @@ public class Converter {
 	String date;
 	String version;
 	
+	public static void main(String[] args) {
+		Converter convert;
+		try {
+			convert = new Converter(args[0]);
+			convert.Run();
+		//} catch (ArrayIndexOutOfBoundsException e){
+			//System.out.println("Error: No file specified");
+		} catch (FileNotFoundException e) {
+			System.out.println("Error: File not found");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+
+	}
+	
 	public Converter (String savegame) throws FileNotFoundException{
 		System.out.println("Opening file " + savegame);
 		savein = new BufferedReader(new FileReader(savegame));
@@ -20,12 +36,28 @@ public class Converter {
 	public void Run() throws IOException{		
 		do {
 			in = savein.readLine();
+			if (in.contains("version")) {
+				version = in.split("=")[1];
+				version = version.replaceAll("\\s","");
+				continue;
+			}
+			if (in.contains("date") && date ==null){
+				date = in.split("=")[1];
+				date = version.replaceAll("\\s","");
+			}
 			//TODO: check flags
 			if (in.contains("dynasties=")){
 				dynastyIn();
 			}
 			if (in.contains("character=")){
 				charactersIn();
+			}
+			//Ignore delayed events
+			//Ignore relations
+			//Ignore ambitions
+			//Ignore religion
+			if (in.contains("provinces=")){
+				provincesIn();
 			}
 			
 		} while (in != null);
@@ -45,7 +77,7 @@ public class Converter {
 					dynid = Integer.parseInt(split[0]);
 				} catch (NumberFormatException e) {
 					if (in.contains("name")){
-						dynName = in.split("\"")[2];
+						dynName = in.split("\"")[1];
 						dynastys.put(dynid, dynName);
 						dynName = null;
 						dynid = 0;
@@ -57,9 +89,20 @@ public class Converter {
 		
 	}
 
-	private void charactersIn(){
+	private void charactersIn() throws IOException{
 		System.out.println("Reading in characters");
-		
+		do {
+			in = savein.readLine();
+			
+		}while (in.contains("delayed_event=")==false && in != null);
 	
+	}
+	
+	private void provincesIn() throws IOException{
+		System.out.println("Reading in provinces");
+		do {
+			in = savein.readLine();
+			
+		}while (in.contains("delayed_event=")==false && in != null);
 	}
 }

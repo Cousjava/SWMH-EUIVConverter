@@ -8,7 +8,7 @@ public class SWMH_EUIV_Converter {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		Converter convert;
 		try {
 			convert = new Converter(args[0]);
@@ -20,6 +20,6 @@ public class SWMH_EUIV_Converter {
 			e.printStackTrace();
 		}	
 
-	}
+	}*/
 
 }
