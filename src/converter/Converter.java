@@ -7,10 +7,11 @@ public class Converter {
 
 	BufferedReader savein;
 	HashMap<Integer, String> dynastys;
-	ArrayList<CK2Prov> CK2Provs; 
+	CK2Prov[] CK2Provs; 
 	String in;
 	String date;
 	String version;
+	static int noProvinces = 1954; //SMWH 2.901
 	
 	public static void main(String[] args) {
 		Converter convert;
@@ -32,13 +33,14 @@ public class Converter {
 		System.out.println("Opening file " + savegame);
 		savein = new BufferedReader(new FileReader(savegame));
 		dynastys = new HashMap<Integer, String>();
-		CK2Provs = new ArrayList<CK2Prov>();
+		CK2Provs = new CK2Prov[noProvinces + 1];
 	}
 	
 	public void Run() throws IOException{		
 		do {
 			in = savein.readLine();
-			if (in.contains("version")) {
+			if (in ==null) break;
+			if (in.contains("version") && version == null) {
 				version = in.split("=")[1];
 				version = version.replaceAll("\\s","");
 				continue;
@@ -51,9 +53,7 @@ public class Converter {
 			if (in.contains("dynasties=")){
 				dynastyIn();
 			}
-			if (in.contains("character=")){
-				charactersIn();
-			}
+			
 			//Ignore delayed events
 			//Ignore relations
 			//Ignore ambitions
@@ -61,9 +61,13 @@ public class Converter {
 			if (in.contains("provinces=")){
 				provincesIn();
 			}
-			if (in.contains("titles=")){
+			if (in.contains("character=")){
+				charactersIn();
+			}
+			if (in.contains("title=")){
 				titlesIn();
 			}
+			//combat=
 		} while (in != null);
 		
 	}
@@ -98,7 +102,7 @@ public class Converter {
 		do {
 			in = savein.readLine();
 			
-		}while (in.contains("delayed_event=")==false && in != null);
+		}while (in != null && in.contains("delayed_event=")==false);
 	
 	}
 	
@@ -127,10 +131,11 @@ public class Converter {
 			}
 			if (brackets==1){
 				if (prov.id != 0){
-					CK2Provs.add(prov.id, prov);
+					CK2Provs[prov.id]= (CK2Prov)prov.clone();
 				}
+				
 				prov = new CK2Prov();
-				prov.id = Integer.parseInt(in.split("=")[0]);
+				prov.id = Integer.parseInt(in.split("=")[0].replaceAll("\\s",""));
 			}
 			if (in.contains("religion")){
 				prov.religion = in.split("=")[1];
@@ -161,8 +166,10 @@ public class Converter {
 		} while (in.contains("title=")==false && in != null);
 	}
 
-	private void titlesIn(){
+	private void titlesIn() throws IOException{
 		System.out.println("Reading in titles...");
-		
+		do {
+			in = savein.readLine();
+		} while (in != null && in.contains("combat=")==false);
 	}
 }

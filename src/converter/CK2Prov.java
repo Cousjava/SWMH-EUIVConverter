@@ -1,6 +1,6 @@
 package converter;
 
-public class CK2Prov {
+public class CK2Prov implements Cloneable {
 
 	int id;
 	String name;
@@ -105,6 +105,16 @@ public class CK2Prov {
 		tb_war_camp = 0;		//Tribal War Camp or Steppe Barracks
 		tb_practice_range=0;	//Tribal Practice Range or Steppe Stable
 		tb_arsenal = 0;//Tribal training grounds/arsenal
+	}
+	
+	protected Object clone(){
+		 try {
+	            return super.clone();
+	        }
+	        catch (CloneNotSupportedException e) {
+	            // This should never happen
+	            throw new InternalError(e.toString());
+	        }
 	}
 	
 }
