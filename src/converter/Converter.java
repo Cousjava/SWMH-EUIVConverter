@@ -14,6 +14,7 @@ public class Converter {
 	ArrayList<CK2Title> CK2Titles;
 	HashMap<String, CK2Title> titles2;
 	HashMap<Integer, EUIVProv> euprovs;
+	Mapping maps = new Mapping();
 	String in;
 	String date;
 	String version;
@@ -96,6 +97,7 @@ public class Converter {
 		} while (in != null);
 		savein.close();
 		System.out.println("Finished readig in CK2 file");
+		EUIVGen();
 	}
 	
 	private void dynastyIn() throws IOException{
@@ -215,12 +217,19 @@ public class Converter {
 	}
 	
 	private void EUIVGen(){
-		
+		System.out.println("Generating EUIV Provinces");
+		for (int i = 1; i <= EUIVProvs; i++){
+			EUIVProv prov = new EUIVProv();
+			List<String> titles = maps.titlesMap.get(i);
+			String provTitle = titles.get(0);//TODO: Iterate here; add stuff
+			prov.owner = topLiege(titles2.get(provTitle));
+			euprovs.put(i, prov);
+		}
 		
 		
 	}
 	
-	private String topLiege(CK2Title title){
+	public String topLiege(CK2Title title){
 		if (title.leige == null){
 			return title.name;
 		} else {		
