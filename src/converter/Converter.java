@@ -1,7 +1,10 @@
 package converter;
 
 import java.io.*;
+import java.nio.*;
+import java.nio.file.*;
 import java.util.*;
+
 
 public class Converter {
 
@@ -9,10 +12,15 @@ public class Converter {
 	HashMap<Integer, String> dynastys;
 	CK2Prov[] CK2Provs;
 	ArrayList<CK2Title> CK2Titles;
+	HashMap<String, CK2Title> titles2;
+	HashMap<Integer, EUIVProv> euprovs;
 	String in;
 	String date;
 	String version;
+	String player_realm;
+	String outDir;
 	static int noProvinces = 1954; //SMWH 2.901
+	static int EUIVProvs = 3003;
 	
 	public static void main(String[] args) {
 		Converter convert;
@@ -36,6 +44,20 @@ public class Converter {
 		dynastys = new HashMap<Integer, String>();
 		CK2Provs = new CK2Prov[noProvinces + 1];
 		CK2Titles = new ArrayList<CK2Title>();
+		titles2 = new HashMap<String, CK2Title>();
+		euprovs = new HashMap<Integer, EUIVProv>();
+		//String outDirtop = new File(savegame).getParent().getParent().getParent().getParent();		
+		try {
+			Files.deleteIfExists(new File(savegame.replace(".ck2", "")).toPath());
+		} catch (IOException e) {
+			System.out.println("Error cleaning output folder");
+			e.printStackTrace();
+		}
+		boolean fCreate = new File(savegame.replace(".ck2", "")).mkdir();
+		if (!fCreate){
+			System.out.println("Error creating output folder");
+			System.exit(1);
+		}
 	}
 	
 	public void Run() throws IOException{		
@@ -72,7 +94,8 @@ public class Converter {
 			
 			//combat=
 		} while (in != null);
-		
+		savein.close();
+		System.out.println("Finished readig in CK2 file");
 	}
 	
 	private void dynastyIn() throws IOException{
@@ -177,6 +200,7 @@ public class Converter {
 			if (in.contains("combat="))break;
 			if ((in.contains("c_") || in.contains("b_")||in.contains("d_")||in.contains("e_")||in.contains("k_"))&&!in.contains("title=")){
 				CK2Titles.add((CK2Title) title.clone());
+				titles2.put(title.name, (CK2Title) title.clone());
 				title = new CK2Title();
 				title.name = in.split("=")[0].replaceAll("\\s","");
 			}else if (in.contains("holder") && title.iHolder != 0){
@@ -186,5 +210,25 @@ public class Converter {
 			}
 			
 		} while (in != null && in.contains("combat=")==false);
+		
+		
+	}
+	
+	private void EUIVGen(){
+		
+		
+		
+	}
+	
+	private String topLiege(CK2Title title){
+		if (title.leige == null){
+			return title.name;
+		} else {		
+			String parent = title.sLeige;
+			CK2Title parTitle = titles2.get(parent);
+			return topLiege(parTitle);
+		}
+		
+		
 	}
 }
