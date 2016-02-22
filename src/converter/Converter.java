@@ -7,7 +7,8 @@ public class Converter {
 
 	BufferedReader savein;
 	HashMap<Integer, String> dynastys;
-	CK2Prov[] CK2Provs; 
+	CK2Prov[] CK2Provs;
+	ArrayList<CK2Title> CK2Titles;
 	String in;
 	String date;
 	String version;
@@ -34,6 +35,7 @@ public class Converter {
 		savein = new BufferedReader(new FileReader(savegame));
 		dynastys = new HashMap<Integer, String>();
 		CK2Provs = new CK2Prov[noProvinces + 1];
+		CK2Titles = new ArrayList<CK2Title>();
 	}
 	
 	public void Run() throws IOException{		
@@ -61,12 +63,13 @@ public class Converter {
 			if (in.contains("provinces=")){
 				provincesIn();
 			}
+			if (in.contains("title=") && CK2Provs[1] != null && CK2Titles.size() == 0){//the provs bit it to stop this section firing early
+				titlesIn();
+			}
 			if (in.contains("character=")){
 				charactersIn();
 			}
-			if (in.contains("title=")){
-				titlesIn();
-			}
+			
 			//combat=
 		} while (in != null);
 		
@@ -168,8 +171,20 @@ public class Converter {
 
 	private void titlesIn() throws IOException{
 		System.out.println("Reading in titles...");
+		CK2Title title = new CK2Title();
 		do {
 			in = savein.readLine();
+			if (in.contains("combat="))break;
+			if ((in.contains("c_") || in.contains("b_")||in.contains("d_")||in.contains("e_")||in.contains("k_"))&&!in.contains("title=")){
+				CK2Titles.add((CK2Title) title.clone());
+				title = new CK2Title();
+				title.name = in.split("=")[0].replaceAll("\\s","");
+			}else if (in.contains("holder") && title.iHolder != 0){
+				title.iHolder = Integer.parseInt(in.split("=")[1].replaceAll("\\s",""));
+			} else if (in.contains("title=")){
+				title.sLeige = in.split("=")[1].replaceAll("\\s","").replaceAll("\"", "");
+			}
+			
 		} while (in != null && in.contains("combat=")==false);
 	}
 }

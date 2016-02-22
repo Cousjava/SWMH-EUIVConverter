@@ -1,18 +1,15 @@
 package converter;
 
-public class CK2Char implements Cloneable {
+public class CK2Title implements Cloneable{
 
-	int id;
 	String name;
-	int dynasty;
-	String birthdate; //As string because the Clauswitz engine uses this format
 	String religion;
-	String culture;
-	int wealth;
-	String attributes;
-	String traits;
-	String government;
-	String capital;
+	String sLeige;
+	CK2Title leige;
+	int iHolder;
+	CK2Char holder;
+	
+
 	
 	protected Object clone(){
 		 try {
