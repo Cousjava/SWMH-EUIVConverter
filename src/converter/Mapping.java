@@ -40,9 +40,47 @@ public class Mapping {
 		tagMap.put("d_auvergne", "AUV");
 		tagMap.put("c_auvergne", "AUV");
 		tagMap.put("c_venaissin", "AVI");
+		tagMap.put("k_aydin", "AYD");
+		tagMap.put("d_baden", "BAD");
+		tagMap.put("d_bar", "BAR");
+		tagMap.put("k_bavaria", "BAV");
+		tagMap.put("d_berry", "BER");
+		tagMap.put("k_bohemia", "BOH");
+		tagMap.put("k_bosnia", "BOS");
+		tagMap.put("d_bosnia", "BOS");
+		tagMap.put("d_bourbon", "BOU");
+		tagMap.put("d_brandenburg", "BRA");
+		tagMap.put("d_brabant", "BRB");
+		tagMap.put("d_bremen", "BRE");
+		tagMap.put("c_bremen", "BRE");
+		tagMap.put("k_brittany", "BRI");
+		tagMap.put("d_brittany", "BRI");
+		tagMap.put("d_brunswick", "BRU");
+		tagMap.put("d_bashkirs", "BSH");
+		tagMap.put("c_semien", "BTI");
+		tagMap.put("c_bukhara", "BUK");
+		tagMap.put("k_bulgaria", "BUL");
+		tagMap.put("k_burgundy", "BUR");
+		tagMap.put("e_byzantium", "BYZ");
+		tagMap.put("k_castille", "CAS");
+		tagMap.put("d_catalunya_nova", "CAT");
+		tagMap.put("c_corfu", "CEP");
+		tagMap.put("d_champagne", "CHP");
+		tagMap.put("d_chernigov", "CHR");
+		tagMap.put("k_candar", "CND");
+		tagMap.put("d_connacht", "CNN");
+		tagMap.put("d_corsica", "COR");
+		tagMap.put("d_crimea", "CRI");
+		tagMap.put("d_cornwall", "CRN");
+		tagMap.put("k_croatia", "CRO");
+		tagMap.put("d_krete", "CRT");
+		tagMap.put("d_cyprus", "CYP");
+		tagMap.put("k_krete", "CRT");
+		tagMap.put("k_cyprus", "CYP");
 		
 		//Province Map
 		//provMap = new HashMap<String, Integer>();
+		//TODO: Start of tile mappings (done really, but the todo is for annotation bookmark
 		ArrayList<String> mappings = new ArrayList<String>();
 		mappings.add("d_uppland");
 		mappings.add("c_uppland");
