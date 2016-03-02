@@ -221,9 +221,11 @@ public class Converter {
 		for (int i = 1; i <= EUIVProvs; i++){
 			EUIVProv prov = new EUIVProv();
 			List<String> titles = maps.titlesMap.get(i);
-			String provTitle = titles.get(0);//TODO: Iterate here; add stuff
-			prov.owner = topLiege(titles2.get(provTitle));
-			euprovs.put(i, prov);
+			if (titles != null ){//If there is no CK2 province for EUIV then nothing happens
+				String provTitle = titles.get(0);//TODO: Iterate here; add stuff
+				prov.owner = topLiege(titles2.get(provTitle));
+				euprovs.put(i, prov);
+			}
 		}
 		
 		
