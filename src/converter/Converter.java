@@ -13,6 +13,8 @@ public class Converter {
 	CK2Prov[] CK2Provs;
 	ArrayList<CK2Title> CK2Titles;
 	HashMap<String, CK2Title> titles2;
+	EUIVCountries eucountries;
+	HashMap<String, String> convTitle;
 	HashMap<Integer, EUIVProv> euprovs;
 	Mapping maps = new Mapping();
 	String in;
@@ -47,6 +49,8 @@ public class Converter {
 		CK2Titles = new ArrayList<CK2Title>();
 		titles2 = new HashMap<String, CK2Title>();
 		euprovs = new HashMap<Integer, EUIVProv>();
+		eucountries = new EUIVCountries();
+		convTitle = new HashMap<String,String>();
 		//String outDirtop = new File(savegame).getParent().getParent().getParent().getParent();		
 		try {
 			Files.deleteIfExists(new File(savegame.replace(".ck2", "")).toPath());
@@ -97,7 +101,12 @@ public class Converter {
 		} while (in != null);
 		savein.close();
 		System.out.println("Finished readig in CK2 file");
-		EUIVGen();
+		try {
+			EUIVGen();
+		} catch (CountryTagFullException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	private void dynastyIn() throws IOException{
@@ -216,7 +225,7 @@ public class Converter {
 		
 	}
 	
-	private void EUIVGen(){
+	private void EUIVGen() throws CountryTagFullException{
 		System.out.println("Generating EUIV Provinces");
 		for (int i = 1; i <= EUIVProvs; i++){
 			EUIVProv prov = new EUIVProv();
@@ -225,6 +234,17 @@ public class Converter {
 				String provTitle = titles.get(0);//TODO: Iterate here; add stuff
 				prov.owner = topLiege(titles2.get(provTitle));
 				euprovs.put(i, prov);
+			}
+			if (maps.tagMap.get(prov.owner)!=null){//Countries in EUIV
+				prov.ownerTag = maps.tagMap.get(prov.owner);
+			} else if (convTitle.get(prov.owner)!= null){
+				prov.ownerTag = convTitle.get(prov.owner);
+			} else {
+				EUIVCountry country = new EUIVCountry();
+				String tag = eucountries.put(country);
+				country.tag = tag;
+				prov.ownerTag = tag;
+				convTitle.put(prov.owner, tag);
 			}
 		}
 		
