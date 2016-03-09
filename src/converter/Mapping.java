@@ -1335,7 +1335,96 @@ public class Mapping {
 		//Provinces 478-480 CK2 Wilderness
 		//Provinces 481 - 502 America
 				
-			
+		//TODO: Province 503
+		mappings.add("c_kutch");
+		titlesMap.put(503, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_debul");
+		titlesMap.put(504, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_siwistan");
+		titlesMap.put(505, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_multan");
+		titlesMap.put(506, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_lahur");
+		titlesMap.put(507, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_kasmira");
+		titlesMap.put(508, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_trigarta");
+		titlesMap.put(509, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_hisar");
+		titlesMap.put(510, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_sthanisvara");
+		titlesMap.put(511, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_reni");
+		titlesMap.put(512, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_ludrava");
+		titlesMap.put(513, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_mandavyapura");
+		titlesMap.put(514, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_bhumilka");
+		titlesMap.put(515, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_vadodara");
+		titlesMap.put(516, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_navasarika");
+		titlesMap.put(517, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_chitrakut");
+		titlesMap.put(518, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_sripatha");
+		titlesMap.put(519, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_mathura");
+		titlesMap.put(520, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_vardhamana");
+		titlesMap.put(521, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_delhi");
+		titlesMap.put(522, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_lakhnau");
+		titlesMap.put(523, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_sambhal");
+		titlesMap.put(524, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_gwalior");
+		titlesMap.put(525, (List<String>) mappings.clone());mappings.clear();
+		
+		mappings.add("c_mandapika");
+		titlesMap.put(526, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_burhanpur");
+		titlesMap.put(527, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_kota");
+		//Provinces 528 - 549 Beyond the realm of SWMH
+		mappings.add("c_mahoba");
+		titlesMap.put(550, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_gurgi");
+		titlesMap.put(551, (List<String>) mappings.clone());mappings.clear();
+		//Provinces 552 - 555 beyond the realm of SWMH
+		mappings.add("c_prayaga");
+		titlesMap.put(556, (List<String>) mappings.clone());mappings.clear();
+		//Provinces 557 - 558 beyond the realm of SWMH
+		mappings.add("c_mahoba");
+		titlesMap.put(559, (List<String>) mappings.clone());mappings.clear();
+		//Provinces 570 - 574 beyond the realm of SWMH
+		
+		mappings.add("c_pandjgur");
+		titlesMap.put(575, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_turan");
+		titlesMap.put(576, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_wana");
+		titlesMap.put(577, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_purushapura");
+		titlesMap.put(578, (List<String>) mappings.clone());mappings.clear();
+		//Provinces 579 - 709 beyond the realm of SWMH
+		
+		mappings.add("c_khotan");
+		titlesMap.put(710, (List<String>) mappings.clone());mappings.clear();
+		//Province 711 beyond the realm of SWMH
+		mappings.add("c_aqsu");
+		titlesMap.put(712, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_kashgar");
+		//Provinces 713 - 738 beyond the realm of SWMH
+		titlesMap.put(739, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_chanderi");
+		titlesMap.put(740, (List<String>) mappings.clone());mappings.clear();
+		//Provinces 741 - 1011 America + Cape
+		//Provinces 1012 - 1076 beyond the realm of SWMH
+		
+		
 	}
 	
 	
