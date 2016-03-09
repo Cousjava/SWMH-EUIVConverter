@@ -972,7 +972,7 @@ public class Mapping {
 		mappings.add("c_kolomna");
 		titlesMap.put(300, (List<String>) mappings.clone());mappings.clear();
 		
-		//TODO: Province 301
+		//TODO: Province 301 Completed
 		mappings.add("c_ryazan");
 		titlesMap.put(301, (List<String>) mappings.clone());mappings.clear();
 		mappings.add("c_mordva");
@@ -1023,7 +1023,7 @@ public class Mapping {
 		mappings.add("c_paphlagonia");
 		titlesMap.put(325, (List<String>) mappings.clone());mappings.clear();
 		
-		mappings.add("c_ankyra");//maybe change to b_gibraltar
+		mappings.add("c_ankyra");
 		titlesMap.put(326, (List<String>) mappings.clone());mappings.clear();
 		mappings.add("c_adana");
 		titlesMap.put(327, (List<String>) mappings.clone());mappings.clear();
@@ -1175,8 +1175,167 @@ public class Mapping {
 		mappings.add("c_muscat");
 		titlesMap.put(400, (List<String>) mappings.clone());mappings.clear();
 		
-		//TODO:Province 501
+		//TODO:Province 401
+		mappings.add("c_dhofar");
+		titlesMap.put(401, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_mahra");
+		titlesMap.put(402, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("b_nizwa");
+		titlesMap.put(403, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_dhu_zabi");//REDO Arabian provinces at some point, lots here in EUIV
+		titlesMap.put(404, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_homs");
+		titlesMap.put(405, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_tadmor");
+		titlesMap.put(406, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_asas");
+		titlesMap.put(407, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_basra");
+		titlesMap.put(408, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_karbala");
+		titlesMap.put(409, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_karbala");
+		titlesMap.put(410, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_mosul");
+		titlesMap.put(411, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_ahwaz");
+		titlesMap.put(412, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_idhaj");
+		titlesMap.put(413, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_hamadan");
+		titlesMap.put(414, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_kirkuk");
+		titlesMap.put(415, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_tabriz");
+		titlesMap.put(416, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_gilan");
+		titlesMap.put(417, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_amida");
+		titlesMap.put(418, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_suenik");
+		titlesMap.put(419, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_utik");
+		titlesMap.put(420, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_shirvan");
+		titlesMap.put(421, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_imeretia");
+		titlesMap.put(422, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_kartli");
+		titlesMap.put(423, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_azerbaijan");
+		titlesMap.put(424, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_derbent");
+		titlesMap.put(425, (List<String>) mappings.clone());mappings.clear();
+		
+		mappings.add("c_mazandaran");
+		titlesMap.put(426, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_kumis");
+		titlesMap.put(427, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_rayy");
+		titlesMap.put(428, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_esfahan");
+		titlesMap.put(429, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_mandistan");
+		titlesMap.put(430, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_sirjan");
+		titlesMap.put(431, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_kerman");
+		titlesMap.put(432, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_yazd");
+		titlesMap.put(433, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("b_bampur");
+		titlesMap.put(434, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_sistan");
+		titlesMap.put(435, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_qohistan");
+		titlesMap.put(436, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_farava");
+		titlesMap.put(437, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_uzboy");
+		titlesMap.put(438, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_mangyshlak");
+		titlesMap.put(439, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_kerder");
+		titlesMap.put(440, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("b_khiva");
+		titlesMap.put(441, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_bukhara");
+		titlesMap.put(442, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_ustyurt");
+		titlesMap.put(443, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_amol");
+		titlesMap.put(444, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_merv");
+		titlesMap.put(445, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_badghis");
+		titlesMap.put(446, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_rukhadj");
+		titlesMap.put(447, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_ghazna");
+		titlesMap.put(448, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_ghor");
+		titlesMap.put(449, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_balkh");
+		titlesMap.put(450, (List<String>) mappings.clone());mappings.clear();
+		
+		mappings.add("c_kabul");
+		titlesMap.put(451, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_badakhshan");
+		titlesMap.put(452, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_nakhsheb");
+		titlesMap.put(453, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_samarqand");
+		titlesMap.put(454, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_ustrushana");
+		titlesMap.put(455, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_sarisu");
+		titlesMap.put(456, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_shash");
+		titlesMap.put(457, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_aval");
+		titlesMap.put(458, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_talas");
+		titlesMap.put(459, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_khaylam");
+		titlesMap.put(460, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_almaliq");
+		titlesMap.put(461, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_odishi");
+		titlesMap.put(462, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_malkhicho");
+		titlesMap.put(463, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_itil");
+		titlesMap.put(464, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_buzachi");
+		titlesMap.put(465, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_saray");
+		titlesMap.put(466, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_lower_volga");
+		titlesMap.put(467, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_manych");
+		titlesMap.put(468, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_guryev");
+		titlesMap.put(469, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_yaik");
+		titlesMap.put(470, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_irgiz");
+		titlesMap.put(471, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_aqtobe");
+		titlesMap.put(472, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_tyumen");
+		titlesMap.put(473, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_khantia");
+		titlesMap.put(474, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_bashkirs");
+		titlesMap.put(475, (List<String>) mappings.clone());mappings.clear();
+		
+		//Kypshak  CK2 wilderness
+		mappings.add("c_balkhash");
+		titlesMap.put(477, (List<String>) mappings.clone());mappings.clear();
+		//Provinces 478-480 CK2 Wilderness
+		//Provinces 481 - 502 America
 				
+			
 	}
 	
 	
