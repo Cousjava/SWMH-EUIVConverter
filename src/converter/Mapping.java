@@ -1424,6 +1424,124 @@ public class Mapping {
 		//Provinces 741 - 1011 America + Cape
 		//Provinces 1012 - 1076 beyond the realm of SWMH
 		
+		mappings.add("c_perm");
+		titlesMap.put(1077, (List<String>) mappings.clone());mappings.clear();
+		//Province 1078 beyond SWMH
+		mappings.add("c_hlynov");
+		titlesMap.put(1079, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_ashli");
+		//Province 1080 beyond SWMH
+		titlesMap.put(1081, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_qazan");
+		titlesMap.put(1082, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_grassland_cheremisa");
+		titlesMap.put(1083, (List<String>) mappings.clone());mappings.clear();
+		//Provinces 1084 - 1109 beyond SWMH
+		
+		//West African provinces. TODO sort out later, there are large differences here
+		//between SWMH and EUIV set up.
+		mappings.add("c_tharasset");
+		titlesMap.put(1110, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_takrur");
+		titlesMap.put(1112, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_djolof");
+		titlesMap.put(1113, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_djolof");
+		//Provs 1114, 1115 maybe - sort out later. Uncolonised in EUIV.
+		titlesMap.put(1116, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_bambuk");
+		titlesMap.put(1120, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_bure");
+		titlesMap.put(1121, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_soso");
+		titlesMap.put(1123, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_mali");
+		titlesMap.put(1124, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_tuat");
+		titlesMap.put(1127, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_taghaza");
+		titlesMap.put(1128, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_araouane");
+		titlesMap.put(1129, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_tadmekka");
+		titlesMap.put(1130, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_massina");
+		titlesMap.put(1131, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_timbuktu");
+		titlesMap.put(1132, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_gao");
+		titlesMap.put(1133, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_djenne");
+		titlesMap.put(1134, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_gurma");
+		titlesMap.put(1135, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_say");
+		titlesMap.put(1142, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_gobir");
+		titlesMap.put(1148, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_katsina");
+		titlesMap.put(1149, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_zamfara");
+		titlesMap.put(1150, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_kano");
+		titlesMap.put(1155, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_bornu");
+		titlesMap.put(1157, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_kanem");
+		titlesMap.put(1158, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_bagirmi");
+		titlesMap.put(1159, (List<String>) mappings.clone());mappings.clear();
+		//Provinces 1160 - 1211 beyond SWMH
+		
+		mappings.add("c_zaila");
+		titlesMap.put(1212, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_shewa");
+		titlesMap.put(1213, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_ifat");
+		titlesMap.put(1214, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_tadjoura");
+		titlesMap.put(1215, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("b_tagali");
+		titlesMap.put(1216, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_uri");
+		titlesMap.put(1219, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_ghazali");
+		titlesMap.put(1220, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("b_elobeid");
+		titlesMap.put(1221, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_sennar");
+		titlesMap.put(1222, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_gojjam");
+		titlesMap.put(1223, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_begemder");
+		titlesMap.put(1224, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_wolqayt");
+		titlesMap.put(1225, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_kassala");
+		titlesMap.put(1226, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_aksum");
+		titlesMap.put(1227, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_dongola");
+		titlesMap.put(1228, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_atbara");
+		titlesMap.put(1229, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_adulis");
+		titlesMap.put(1230, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_aswan");
+		titlesMap.put(1231, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_suakin");
+		titlesMap.put(1232, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_kharija");
+		titlesMap.put(1233, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_qasribrim");
+		titlesMap.put(1234, (List<String>) mappings.clone());mappings.clear();
+		//Provinces 1235 - 1246 in Oceania
+		mappings.add("c_corsica");
+		titlesMap.put(1247, (List<String>) mappings.clone());mappings.clear();
+		//Provinces 1248, 1249 beyond SWMH
+		//Provinces 1250 - 1741 apart from 1306 (Sao Tome) and 1318 are lakes and seas 
+		mappings.add("c_szepes");
+		titlesMap.put(1318, (List<String>) mappings.clone());mappings.clear();
 		
 	}
 	
