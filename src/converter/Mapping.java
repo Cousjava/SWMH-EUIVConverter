@@ -2277,19 +2277,122 @@ public class Mapping {
 		mappings.add("c_tummo");
 		titlesMap.put(2474, (List<String>) mappings.clone());mappings.clear();
 		//Provinces 2475 - 2745 beyond SWMH
-		/*
-		mappings.add("c_hanyan");
-		titlesMap.put(2465, (List<String>) mappings.clone());mappings.clear();
-		mappings.add("c_draa");
-		titlesMap.put(2466, (List<String>) mappings.clone());mappings.clear();
-		mappings.add("c_fes");
-		titlesMap.put(2467, (List<String>) mappings.clone());mappings.clear();
-		mappings.add("c_marrakech");
-		titlesMap.put(2468, (List<String>) mappings.clone());mappings.clear();
-		mappings.add("c_infa");
-		titlesMap.put(2469, (List<String>) mappings.clone());mappings.clear();
-		mappings.add("c_anti-atlas");
-		titlesMap.put(2470, (List<String>) mappings.clone());mappings.clear();*/
+		
+		//TODO: Province 2746
+		mappings.add("c_vidin");
+		titlesMap.put(2746, (List<String>) mappings.clone());mappings.clear();
+		//Provs 2747, 2748 beyond SWMH
+		mappings.add("c_ustyuzhna");
+		titlesMap.put(2749, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_philippopolis");
+		titlesMap.put(2450, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_cuenca");
+		titlesMap.put(2451, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_sogn");
+		titlesMap.put(2452, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_narbonne-atlas");
+		titlesMap.put(2453, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_calatrava");
+		titlesMap.put(2454, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_soria-atlas");
+		titlesMap.put(2455, (List<String>) mappings.clone());mappings.clear();
+		//Provinces 2756 - 2953 beyond SWMH
+		
+		mappings.add("c_djerba");
+		titlesMap.put(2954, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_niederbayern");
+		titlesMap.put(2955, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_niederbayern");
+		titlesMap.put(2956, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_niederbayern");
+		titlesMap.put(2957, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_pogesania-atlas");
+		titlesMap.put(2958, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_sacz");
+		titlesMap.put(2959, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_sacz-atlas");
+		titlesMap.put(2960, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_terebovl");
+		titlesMap.put(2961, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_ostrog");
+		titlesMap.put(2962, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_kujawy");
+		titlesMap.put(2963, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_altmark");
+		titlesMap.put(2964, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_plauen-atlas");
+		titlesMap.put(2965, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_lower_silesia");
+		titlesMap.put(2966, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_plauen-atlas");
+		titlesMap.put(2967, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_domazlice");
+		titlesMap.put(2968, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_lubusz");
+		titlesMap.put(2969, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_hradec");
+		titlesMap.put(2970, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_schaumburg");
+		titlesMap.put(2971, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_celle");
+		titlesMap.put(2972, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_tecklenburg");
+		titlesMap.put(2973, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_loon");
+		titlesMap.put(2974, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_kleve");
+		titlesMap.put(2975, (List<String>) mappings.clone());mappings.clear();
+		
+		mappings.add("c_spoleto");
+		titlesMap.put(2976, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_urbino");
+		titlesMap.put(2977, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_arezzo");
+		titlesMap.put(2978, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_novara");
+		titlesMap.put(2979, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_lucca");
+		titlesMap.put(2980, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_monferrato");
+		titlesMap.put(2981, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_siracusa");
+		titlesMap.put(2982, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_salerno");
+		titlesMap.put(2983, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_consenza");
+		titlesMap.put(2984, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_foggia");
+		titlesMap.put(2985, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_cagliari");
+		titlesMap.put(2986, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_urgell");
+		titlesMap.put(2987, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_tarragona");
+		titlesMap.put(2988, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_najera");
+		titlesMap.put(2989, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_teruel");
+		titlesMap.put(2990, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_forcalquier");
+		titlesMap.put(2991, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_finale");
+		titlesMap.put(2992, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_werle");
+		titlesMap.put(2993, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_wolgast");
+		titlesMap.put(2994, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_slupsk");
+		titlesMap.put(2995, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_mecklemburg");
+		titlesMap.put(2996, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_swiecie");
+		titlesMap.put(2997, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_buzau");
+		titlesMap.put(2998, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_hormuz");
+		titlesMap.put(2999, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_naissus");
+		titlesMap.put(3000, (List<String>) mappings.clone());mappings.clear();
 		
 	}
 	
