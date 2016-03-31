@@ -25,6 +25,8 @@ public class Converter {
 	static int noProvinces = 1954; //SMWH 2.901
 	static int EUIVProvs = 3003;
 	
+	int linenumber= 0;
+	
 	public static void main(String[] args) {
 		Converter convert;
 		try {
@@ -44,6 +46,7 @@ public class Converter {
 	public Converter (String savegame) throws FileNotFoundException{
 		System.out.println("Opening file " + savegame);
 		savein = new BufferedReader(new FileReader(savegame));
+		linenumber = 0;
 		dynastys = new HashMap<Integer, String>();
 		CK2Provs = new CK2Prov[noProvinces + 1];
 		CK2Titles = new ArrayList<CK2Title>();
@@ -68,6 +71,7 @@ public class Converter {
 	public void Run() throws IOException{		
 		do {
 			in = savein.readLine();
+			linenumber++;
 			if (in ==null) break;
 			if (in.contains("version") && version == null) {
 				version = in.split("=")[1];
@@ -100,7 +104,7 @@ public class Converter {
 			//combat=
 		} while (in != null);
 		savein.close();
-		System.out.println("Finished readig in CK2 file");
+		System.out.println("Finished reading in CK2 file");
 		try {
 			EUIVGen();
 		} catch (CountryTagFullException e) {
@@ -115,6 +119,7 @@ public class Converter {
 		String dynName;
 		do {
 			in = savein.readLine();
+			linenumber++;
 			if (in.contains("=")){
 				
 				String[] split = in.split("=");
@@ -138,6 +143,7 @@ public class Converter {
 		System.out.println("Reading in characters...");
 		do {
 			in = savein.readLine();
+			linenumber++;
 			
 		}while (in != null && in.contains("delayed_event=")==false);
 	
@@ -150,6 +156,7 @@ public class Converter {
 		CK2Prov prov = new CK2Prov();
 		do {
 			in = savein.readLine();
+			linenumber++;
 			if (in.contains("{")) {
 				brackets++;continue;
 			}
@@ -206,21 +213,45 @@ public class Converter {
 	private void titlesIn() throws IOException{
 		System.out.println("Reading in titles...");
 		CK2Title title = new CK2Title();
+		boolean base = false;
+		boolean liege = false;
 		do {
 			in = savein.readLine();
+			linenumber++;
 			if (in.contains("combat="))break;
-			if ((in.contains("c_") || in.contains("b_")||in.contains("d_")||in.contains("e_")||in.contains("k_"))&&!in.contains("title=")){
+			//This should be a regex to match any title start
+			if (in.matches("\\t*[bcde]_.*") &&!in.contains("title=")){
 				CK2Titles.add((CK2Title) title.clone());
 				titles2.put(title.name, (CK2Title) title.clone());
 				title = new CK2Title();
 				title.name = in.split("=")[0].replaceAll("\\s","");
 			}else if (in.contains("holder") && title.iHolder != 0){
 				title.iHolder = Integer.parseInt(in.split("=")[1].replaceAll("\\s",""));
+			} else if (in.contains("base_title=") && liege == false){
+				String[] split = in.split("=");
+				if (split.length > 1){
+					title.baseTitle = split[1].replaceAll("\\s","").replaceAll("\"", "");
+				} else {
+					base = true;
+				}
+			} else if (in.matches("\\t*liege=")){
+				liege=true;
 			} else if (in.contains("title=")){
-				title.sLeige = in.split("=")[1].replaceAll("\\s","").replaceAll("\"", "");
+				if (base == true){
+					title.baseTitle= in.split("=")[1].replaceAll("\\s","").replaceAll("\"", "");
+					base = false;
+				//} else if (liege == true){
+					
+				} else {
+					title.sLeige = in.split("=")[1].replaceAll("\\s","").replaceAll("\"", "");
+				}
+			} else if (liege == true && in.contains("}")){
+				liege = false;
 			}
 			
-		} while (in != null && in.contains("combat=")==false);
+		} while (in != null && in.contains("active_ambition=")==false);
+		CK2Titles.add((CK2Title) title.clone());
+		titles2.put(title.name, (CK2Title) title.clone());
 		
 		
 	}
@@ -251,13 +282,16 @@ public class Converter {
 		
 	}
 	
-	public String topLiege(CK2Title title){
-		if (title.leige == null){
-			return title.name;
-		} else {		
+	public String topLiege(CK2Title title){			
+		if (title.leige != null) {		
 			String parent = title.sLeige;
 			CK2Title parTitle = titles2.get(parent);
+			if (parTitle == null){
+				return title.name;
+			}
 			return topLiege(parTitle);
+		} else {
+			return title.name;
 		}
 		
 		

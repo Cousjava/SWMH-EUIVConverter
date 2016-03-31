@@ -5,6 +5,7 @@ public class CK2Title implements Cloneable{
 	String name;
 	String religion;
 	String sLeige;
+	String baseTitle;
 	CK2Title leige;
 	int iHolder;
 	CK2Char holder;

@@ -394,7 +394,7 @@ public class Mapping {
 		//No Lappland in SWMH
 		mappings.add("c_osterbotten");
 		titlesMap.put(19, (List<String>) mappings.clone());mappings.clear();
-		mappings.add("d_trondelag");
+		//mappings.add("d_trondelag");
 		mappings.add("c_trondelag");
 		titlesMap.put(20, (List<String>) mappings.clone());mappings.clear();
 		mappings.add("c_halogaland");
@@ -2393,6 +2393,13 @@ public class Mapping {
 		titlesMap.put(2999, (List<String>) mappings.clone());mappings.clear();
 		mappings.add("c_naissus");
 		titlesMap.put(3000, (List<String>) mappings.clone());mappings.clear();
+
+		mappings.add("c_skopje");
+		titlesMap.put(3001, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_vrhbosna");
+		titlesMap.put(3002, (List<String>) mappings.clone());mappings.clear();
+		mappings.add("c_euboia");
+		titlesMap.put(3003, (List<String>) mappings.clone());mappings.clear();
 		
 	}
 	
